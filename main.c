@@ -5,8 +5,8 @@ int main() {
 	srand(time(NULL));
 	set_t *s1 = new_set();
 	set_t *s2 = new_set();
-	getchar();
-	
+	printf("=============== SET 1 ===============\n");
+
 	do {
 		short select;
 		printf("\n1: Insert in set 1\n");
@@ -29,6 +29,8 @@ int main() {
 			break;
 		}
 	} while (1);
+
+	printf("=============== SET 2 ===============\n");
 
 	do {
 		short select;
