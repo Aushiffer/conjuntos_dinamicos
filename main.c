@@ -8,33 +8,58 @@ int main() {
 	set_t *s1 = new_set();
 	set_t *s2 = new_set();
 	int range_sets;
-	printf("Max value of the sets: ");
+	printf("Max random value of the sets: ");
 	scanf("%d", &range_sets);
-	printf("\n");
+	getchar();
 	
-	for (int i = 0; i < range_sets; i++)
-		insert_in_set(s1, (rand() % range_sets) + 1);
+	do {
+		short select;
+		printf("\n1: Insert in set 1\n");
+		printf("2: Remove from set 1\n");
+		printf("3: Finish\n");
+		scanf("%1hd", &select);
+		getchar();
 
-	for (int j = 0; j < range_sets; j++)
-		insert_in_set(s2, (rand() % range_sets) + 1);
+		if (select == 1) {
+			int element;
+			printf("\nEnter with the value to put on set 1: ");
+			scanf("%d", &element);
+			getchar();
+			insert_in_set(s1, element);
+			printf("Set: ");
+			print_set(s1);
+		} else if (select == 2) {
 
-	set_t *u1 = unite(s1, s2);
-	set_t *i1 = intersect(s1, s2);
-	printf("Set 1: ");
-	print_set(s1);
-	printf("\n");
-	printf("Set 2: ");
-	print_set(s2);
-	printf("\n");
-	printf("Union: ");
-	print_set(u1);
-	printf("\n");
-	printf("Intersection: ");
-	print_set(i1);
+		} else {
+			break;
+		}
+	} while (1);
+
+	do {
+		short select;
+		printf("\n1: Insert in set 2\n");
+		printf("2: Remove from set 2\n");
+		printf("3: Finish\n");
+		scanf("%1hd", &select);
+		getchar();
+
+		if (select == 1) {
+			int element;
+			printf("\nEnter with the value to put on set 2: ");
+			scanf("%d", &element);
+			getchar();
+			insert_in_set(s2, element);
+			printf("Set: ");
+			print_set(s2);
+		} else if (select == 2) {
+			
+		} else {
+			break;
+		}
+	} while (1);
+
 	free_set(s1);
 	free_set(s2);
-	free_set(u1);
-	free_set(i1);
 
 	return 0;
 }
