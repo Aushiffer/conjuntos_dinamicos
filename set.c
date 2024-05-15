@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "set.h"
 
 set_t *new_set() {

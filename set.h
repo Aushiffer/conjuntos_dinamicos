@@ -1,3 +1,9 @@
+#ifndef __SET__
+#define __SET__
+
+#include <stdio.h>
+#include <stdlib.h>
+
 // Set ADT
 typedef struct Set {
 	int abs_size;
@@ -15,7 +21,7 @@ int size_set(set_t *s);
 int exists_in_set(set_t *s, int a);
 
 /* Insertion Sort 
- * This algo was chosen because at the moment of insertion of a new value, the set is already sorted, therefore making it O(n)) */
+ * This algo was chosen because at the moment of insertion of a new value, the set is already sorted, therefore making it around O(n)) */
 void insertion_sort(int *set_array, int b);
 
 // Puts 'a' into 's'
@@ -38,3 +44,5 @@ set_t *unite(set_t *s1, set_t *s2);
 
 // Returns the intersection between 's1' and 's2'
 set_t *intersect(set_t *s1, set_t *s2);
+
+#endif // __SET__

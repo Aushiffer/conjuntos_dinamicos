@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
 #include "set.h"
 
@@ -7,9 +5,6 @@ int main() {
 	srand(time(NULL));
 	set_t *s1 = new_set();
 	set_t *s2 = new_set();
-	int range_sets;
-	printf("Max random value of the sets: ");
-	scanf("%d", &range_sets);
 	getchar();
 	
 	do {
