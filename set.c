@@ -86,6 +86,8 @@ void remove_from_set(set_t *s, int a) {
 				return;
 			}
 
+			insertion_sort(s->elements, s->abs_size);
+
 			return;
 		}
 	}

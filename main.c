@@ -72,6 +72,42 @@ int main() {
 		}
 	} while (1);
 
+	printf("Create a union between the sets? (y for yes): ");
+	char do_union;
+	scanf("%c", &do_union);
+	getchar();
+
+	switch (do_union) {
+		case 'y':
+
+		if (1) {
+			set_t *uni = unite(s1, s2);
+			printf("\nUnion: ");
+			print_set(uni);
+			free_set(uni);
+		}
+
+		break;
+	}
+
+	printf("Create a intersection between the sets? (y for yes): ");
+	char do_intersct;
+	scanf("%c", &do_intersct);
+	getchar();
+
+	switch (do_intersct) {
+		case 'y':
+
+		if (1) {
+			set_t *intersct = intersect(s1, s2);
+			printf("\nIntersection: ");
+			print_set(intersct);
+			free_set(intersct);
+		}
+
+		break;
+	}
+
 	free_set(s1);
 	free_set(s2);
 
