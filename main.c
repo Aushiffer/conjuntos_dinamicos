@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <time.h>
 #include "set.h"
 
@@ -5,7 +6,7 @@ int main() {
 	srand(time(NULL));
 	set_t *s1 = new_set();
 	set_t *s2 = new_set();
-	printf("=============== SET 1 ===============\n");
+	printf("\n=============== SET 1 ===============\n");
 
 	do {
 		short select;
@@ -24,13 +25,21 @@ int main() {
 			printf("Set: ");
 			print_set(s1);
 		} else if (select == 2) {
-
-		} else {
+			int element;
+			printf("\nEnter with the value to remove from set 1: ");
+			scanf("%d", &element);
+			getchar();
+			remove_from_set(s1, element);
+			printf("Set: ");
+			print_set(s1);
+		} else if (select == 3) {
 			break;
+		} else {
+			printf("[-] Invalid option\n");
 		}
 	} while (1);
 
-	printf("=============== SET 2 ===============\n");
+	printf("\n=============== SET 2 ===============\n");
 
 	do {
 		short select;
@@ -49,9 +58,17 @@ int main() {
 			printf("Set: ");
 			print_set(s2);
 		} else if (select == 2) {
-			
-		} else {
+			int element;
+			printf("\nEnter with the value to remove from set 2: ");
+			scanf("%d", &element);
+			getchar();
+			remove_from_set(s2, element);
+			printf("Set: ");
+			print_set(s2);
+		} else if (select == 3) {
 			break;
+		} else {
+			printf("[-] Invalid option\n");
 		}
 	} while (1);
 

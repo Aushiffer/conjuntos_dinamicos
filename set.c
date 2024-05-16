@@ -86,9 +86,11 @@ void remove_from_set(set_t *s, int a) {
 				return;
 			}
 
-			break;
+			return;
 		}
 	}
+
+	fprintf(stderr, "[-] The element was not found on this set.\n");
 }
 
 void free_set(set_t *s) {

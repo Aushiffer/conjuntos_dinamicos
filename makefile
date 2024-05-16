@@ -1,4 +1,4 @@
-CCFLAGS = -Wall -Wextra -pedantic
+CCFLAGS = -g -Wall -Wextra -pedantic
 PROGRAM = set_program
 
 all: $(PROGRAM)
@@ -13,4 +13,7 @@ set.o: set.c
 	gcc -c set.c $(CCFLAGS)
 
 clean:
+	rm -rf *.o
+
+purge:
 	rm -rf *.gch *.o $(PROGRAM)
